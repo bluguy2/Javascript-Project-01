@@ -15,7 +15,7 @@ function getPlayerGuess() {
 
 	
 	if (userInput === null) {
-    return null;  // pressed cancel
+    return null; 
   }
 
   const number = Number(userInput);
@@ -36,7 +36,7 @@ function getPlayerGuess() {
     return number; 
 };
 
-
+//now for the game
 function checkGuess(userGuess, correctNumber, attempts, maxAttempts, score) {
   if (userGuess === correctNumber) {
     alert("Congratulations, you won");
