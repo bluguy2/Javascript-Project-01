@@ -35,7 +35,7 @@ function getPlayerGuess() {
   
     return number; 
 };
-//console.log(getPlayerGuess())
+
 
 function checkGuess(userGuess, correctNumber, attempts, maxAttempts, score) {
   if (userGuess === correctNumber) {
