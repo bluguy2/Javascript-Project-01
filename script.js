@@ -39,12 +39,15 @@ function getPlayerGuess() {
 function checkGuess(userGuess, correctNumber, attempts, maxAttempts, score) {
   if (userGuess === correctNumber) {
     alert("Congratulations, you won");
+    console.log("Congratulations, you won")
 	return true;
   } else if (attempts < maxAttempts) {
 	if (userGuess < correctNumber) {
      alert("Try a higher number");
+     console.log("Try a higher number")
     } else {
      alert("Try a lower number");
+     console.log("Try a lower number")
 	}
 	
   } return false;
