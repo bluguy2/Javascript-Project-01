@@ -81,6 +81,7 @@ function game() {
   }
 
   alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.`);
+  console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
 };
 
 game();
