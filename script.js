@@ -4,7 +4,6 @@ let score = 100;
 
 function generateRandomNumber() {
    const rannum = Math.floor(Math.random() * 100) + 1;
-   console.log(rannum);
    return rannum;
 }
 
