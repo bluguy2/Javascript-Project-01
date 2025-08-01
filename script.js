@@ -45,7 +45,6 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
 function game() {
   const correctNumber = generateRandomNumber();
   attempts = 0;
-  score = 0;
 
   while (attempts < maxAttempts) {
     const userGuess = getPlayerGuess();
@@ -62,7 +61,6 @@ function game() {
       correctNumber,
       attempts,
       maxAttempts,
-      score
     );
 
     if (won) {
