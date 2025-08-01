@@ -3,9 +3,8 @@ const maxAttempts = 10;
 let score = 100;
 
 function generateRandomNumber() {
-  const ranNum = Math.floor(Math.random() * 100) + 1;
-  console.log("number: " + ranNum);
-  return ranNum;
+   const rannum = Math.floor(Math.random() * 100) + 1;
+   return rannum;
 }
 
 function getPlayerGuess() {
@@ -79,9 +78,8 @@ function game() {
     }
   }
 
-  alert(
-    `You used all your attempts. You lost! The correct number was ${correctNumber}.`
-  );
-}
+  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.`);
+  console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
+};
 
 game();
