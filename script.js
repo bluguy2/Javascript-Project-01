@@ -37,9 +37,9 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
     return true;
   } else if (attempts < maxAttempts) {
     if (userGuess < correctNumber) {
-      alert( `You tried ${userGuess}. Try a higher number. ${attempts} attempt(s) was made!`);
+      alert( `You tried ${userGuess}. ${attempts} attempt(s) was made! Try a higher number.`);
     } else {
-      alert( `You tried ${userGuess}. Try a lower number. ${attempts} attempt(s) was made!`);
+      alert( `You tried ${userGuess}. ${attempts} attempt(s) was made! Try a lower number.`);
     }
   }
   return false;
