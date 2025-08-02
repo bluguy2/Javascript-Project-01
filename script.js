@@ -50,7 +50,7 @@ function game() {
     const userGuess = getPlayerGuess();
 
     if (userGuess === null) {
-      alert("Game cancelled.");
+      alert("Game cancelled. Refresh the page to start again.");
       return;
     }
 
