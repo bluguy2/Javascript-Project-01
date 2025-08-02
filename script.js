@@ -20,7 +20,6 @@ function getPlayerGuess() {
   }
 
   const number = Number(userInput);
-  console.log(number);
 
   if (isNaN(number) || number < 1 || number > 100) {
     alert(
@@ -94,19 +93,34 @@ function game() {
         `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}.`
       );
 	  alert(
-	    `How can you even beat me?!! You must have cheated!! I'll be back!! Come back later and refresh the page to start again!`
+	    `How can you even beat me?!! You must have cheated!! I'll be back!!`
 	  );
       console.log(
-        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Refresh the page to start again.`
+        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Make a choice.`
       );
+	  let chooseagain = confirm("Would you like to try again?")
+  
+      if (chooseagain === true) {
+	     game();
+      } else {
+	     alert("No hard feelings. If you want to challenge me again, refresh the browser");
+      }
       return;
     } else {
       score -= 10;
     }
   }
 
-  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}. Give up or refresh the page so I can beat you again! *Evil laugh*`);
+  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}. I am unstoppable! *Evil laugh*`);
   console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
+  
+  let chooseagain = confirm("Would you like to try again?")
+  
+  if (chooseagain === true) {
+	  game();
+  } else {
+	  alert("No hard feelings. If you want to challenge me again, refresh the browser");
+  }
 };
 
 game();
