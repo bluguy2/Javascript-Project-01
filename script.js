@@ -1,6 +1,8 @@
 let attempts;
 const maxAttempts = 10;
 let score = 100;
+const welcome = "So, you have decided to accept my challenge. Guess the number I have chosen. You have 10 attempts, however, so use them wisely. *Evil laugh*";
+let welcomealert = alert(welcome);
 
 function generateRandomNumber() {
    const rannum = Math.floor(Math.random() * 100) + 1;
@@ -8,7 +10,7 @@ function generateRandomNumber() {
 }
 
 function getPlayerGuess() {
-  const message = "Guess the number (1-100)";
+  const message = "Guess the number between 1 and 100";
   let userInput = prompt(message);
 
   if (userInput === null) {
@@ -34,9 +36,9 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
     return true;
   } else if (attempts < maxAttempts) {
     if (userGuess < correctNumber) {
-      alert( `You tried ${userGuess}.Try a higher number`);
+      alert( `You tried ${userGuess}. Try a higher number. ${attempts} attempt(s) was made!`);
     } else {
-      alert( `You tried ${userGuess}.Try a lower number`);
+      alert( `You tried ${userGuess}. Try a lower number. ${attempts} attempt(s) was made!`);
     }
   }
   return false;
@@ -50,7 +52,7 @@ function game() {
     const userGuess = getPlayerGuess();
 
     if (userGuess === null) {
-      alert("Game cancelled. Refresh the page to start again.");
+      alert("Game cancelled. Give up or refresh the page to start again!");
       return;
     }
 
@@ -65,8 +67,11 @@ function game() {
 
     if (won) {
       alert(
-        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Refresh the page to start again.`
+        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}.`
       );
+	  alert(
+	    `How can you even beat me?!! You must have cheated!! I'll be back!! Come back later and refresh the page to start again!`
+	  );
       console.log(
         `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Refresh the page to start again.`
       );
@@ -76,7 +81,7 @@ function game() {
     }
   }
 
-  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.Refresh the page to start again.`);
+  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}. Give up or refresh the page so I can beat you again! *Evil laugh*`);
   console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
 };
 
