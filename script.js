@@ -1,7 +1,8 @@
 let attempts;
 const maxAttempts = 10;
 let score = 100;
-const welcome = "So, you have decided to accept my challenge. Guess the number I have chosen. You have 10 attempts, however, so use them wisely. *Evil laugh*";
+const welcome = "Welcome to the Number Guessing Game!\n\n" +
+                 "So, you have decided to accept my challenge. Guess the number I have chosen. You have 10 attempts, however, so use them wisely. *Evil laugh*";
 let welcomealert = alert(welcome);
 
 function generateRandomNumber() {
@@ -45,13 +46,14 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
 }
 
 function game() {
-    alert("Welcome to the Number Guessing Game!\n\n" +
+    alert(
         "Instructions:\n" +
         "1. I've picked a random number between 1 and 100.\n" +
         "2. You have 10 attempts to guess it.\n" +
         "3. After each wrong guess, I'll tell you if you need to guess higher or lower.\n" +
         "4. You start with 100 points and lose 10 points for each wrong guess.\n\n" +
-        "Good luck!");
+        "Good luck!"
+		);
 
   const correctNumber = generateRandomNumber();
   attempts = 0;
