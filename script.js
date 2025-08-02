@@ -43,8 +43,17 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
 }
 
 function game() {
+    alert("Welcome to the Number Guessing Game!\n\n" +
+        "Instructions:\n" +
+        "1. I've picked a random number between 1 and 100.\n" +
+        "2. You have 10 attempts to guess it.\n" +
+        "3. After each wrong guess, I'll tell you if you need to guess higher or lower.\n" +
+        "4. You start with 100 points and lose 10 points for each wrong guess.\n\n" +
+        "Good luck!");
+
   const correctNumber = generateRandomNumber();
   attempts = 0;
+  score = 100;
 
   while (attempts < maxAttempts) {
     const userGuess = getPlayerGuess();
@@ -76,7 +85,7 @@ function game() {
     }
   }
 
-  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.Refresh the page to start again.`);
+  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}. Refresh the page to start again.`);
   console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
 };
 
