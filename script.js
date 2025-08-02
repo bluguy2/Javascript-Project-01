@@ -34,9 +34,9 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
     return true;
   } else if (attempts < maxAttempts) {
     if (userGuess < correctNumber) {
-      alert("Try a higher number");
+      alert( `You tried ${userGuess}.Try a higher number`);
     } else {
-      alert("Try a lower number");
+      alert( `You tried ${userGuess}.Try a lower number`);
     }
   }
   return false;
@@ -65,10 +65,10 @@ function game() {
 
     if (won) {
       alert(
-        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}`
+        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Refresh the page to start again.`
       );
       console.log(
-        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}`
+        `You guessed it in ${attempts} attempt(s)! Here is your score: ${score}. Refresh the page to start again.`
       );
       return;
     } else {
@@ -76,7 +76,7 @@ function game() {
     }
   }
 
-  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.`);
+  alert(`You used all your attempts. You lost! The correct number was ${correctNumber}.Refresh the page to start again.`);
   console.log(`You used all your attempts. You lost! The correct number was ${correctNumber}.`)
 };
 
