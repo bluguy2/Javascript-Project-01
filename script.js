@@ -19,6 +19,7 @@ function getPlayerGuess() {
   }
 
   const number = Number(userInput);
+  console.log(number);
 
   if (isNaN(number) || number < 1 || number > 100) {
     alert(
@@ -37,9 +38,11 @@ function checkGuess(userGuess, correctNumber, attempts, maxAttempts) {
     return true;
   } else if (attempts < maxAttempts) {
     if (userGuess < correctNumber) {
-      alert( `You tried ${userGuess}. ${attempts} attempt(s) was made! Try a higher number.`);
+      alert( `You tried ${userGuess}. You made ${attempts} attempt(s)! Try a higher number.`);
+	  console.log( `You tried ${userGuess}. You made ${attempts} attempt(s)! Try a higher number.`);
     } else {
-      alert( `You tried ${userGuess}. ${attempts} attempt(s) was made! Try a lower number.`);
+      alert( `You tried ${userGuess}. You made ${attempts} attempt(s)! Try a lower number.`);
+	  console.log( `You tried ${userGuess}. You made ${attempts} attempt(s)! Try a lower number.`);
     }
   }
   return false;
