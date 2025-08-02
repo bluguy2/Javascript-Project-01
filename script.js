@@ -4,6 +4,7 @@ let score = 100;
 const welcome = "Welcome to the Number Guessing Game!\n\n" +
                  "So, you have decided to accept my challenge. Guess the number I have chosen. You have 10 attempts, however, so use them wisely. *Evil laugh*";
 let welcomealert = alert(welcome);
+let welcomelog = console.log(welcome);
 
 function generateRandomNumber() {
    const rannum = Math.floor(Math.random() * 100) + 1;
@@ -57,6 +58,14 @@ function game() {
         "4. You start with 100 points and lose 10 points for each wrong guess.\n\n" +
         "Good luck!"
 		);
+	console.log(
+	   "Instructions:\n" +
+        "1. I've picked a random number between 1 and 100.\n" +
+        "2. You have 10 attempts to guess it.\n" +
+        "3. After each wrong guess, I'll tell you if you need to guess higher or lower.\n" +
+        "4. You start with 100 points and lose 10 points for each wrong guess.\n\n" +
+        "Good luck!"
+	)
 
   const correctNumber = generateRandomNumber();
   attempts = 0;
@@ -67,6 +76,7 @@ function game() {
 
     if (userGuess === null) {
       alert("Game cancelled. Give up or refresh the page to start again!");
+	  console.log("Game cancelled. Give up or refresh the page to start again!");
       return;
     }
 
